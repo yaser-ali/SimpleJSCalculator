@@ -12,6 +12,14 @@ body {
     gap: 20px;
 }
 
+.ACDE {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    min-height: 14vh;
+}
+
 .key_operators {
     display: grid;
     grid-template-columns: auto auto auto auto;

@@ -21,12 +21,11 @@ function calculate(button) {
         calcDisplayCurrent.textContent = del;
         del = calculator.pop(val);
         calcDisplayCurrent.textContent = CombineCalculation;
-
     }
     else if (val === "=") {
         console.log(CombineCalculation);
         try {
-            calcDisplayPrevious.textContent = CombineCalculation;
+            calcDisplayPrevious.textContent = CombineCalculation + "=";
             calcDisplayCurrent.textContent = eval(CombineCalculation);
         }
         catch (err) {
