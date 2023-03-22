@@ -21,10 +21,9 @@ function calculate(button) {
     else if (val === "DE") {
         var del = calcDisplayCurrent.textContent.slice(0, -1);
         CombineCalculation = del;
-        console.log(calculator);
+        // console.log(calculator);
         calcDisplayCurrent.textContent = del;
         calculator = calcDisplayCurrent.textContent;
-        // calcDisplayCurrent.textContent = CombineCalculation;
     }
     else if (val === "=") {
         console.log(CombineCalculation);
