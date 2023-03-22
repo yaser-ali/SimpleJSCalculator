@@ -24,6 +24,10 @@ function calculate(button) {
     }
     else if (val === "=") {
         console.log(CombineCalculation);
+        if (CombineCalculation == "") {
+            alert("Please input a number and an operator!");
+        }
+        else {
         try {
             calcDisplayPrevious.textContent = CombineCalculation + "=";
             calcDisplayCurrent.textContent = eval(CombineCalculation);
@@ -31,6 +35,7 @@ function calculate(button) {
         catch (err) {
             alert("Error!");
         }
+    }
     }
     else {
         calculator.push(val);
