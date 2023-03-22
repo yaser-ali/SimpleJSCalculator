@@ -19,8 +19,10 @@ function calculate(button) {
         var del = calcDisplayCurrent.textContent.slice(0, -1);
         CombineCalculation = del;
         calcDisplayCurrent.textContent = del;
-        del = calculator.pop(val);
-        calcDisplayCurrent.textContent = CombineCalculation;
+        if (CombineCalculation == 0) {
+            del = calculator.pop(val);
+            calcDisplayCurrent.textContent = CombineCalculation;
+        }
     }
     else if (val === "=") {
         console.log(CombineCalculation);
