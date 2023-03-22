@@ -7,9 +7,9 @@ let CombineCalculation;
 // console.log(buttons);
 
 function calculate(button) {
-    
+
     // console.log(button);
-    
+
     const val = button.textContent;
 
     if (val === "AC") {
@@ -18,24 +18,28 @@ function calculate(button) {
         calcDisplayPrevious.textContent = '';
 
     }
-    else if (val === "DE")
-    {
-        let calculator = calcDisplayCurrent.textContent.slice(0, -1);
-        calcDisplayCurrent.textContent = calculator;
-        calcDisplayCurrent.textContent.slice(0, -1) = CombineCalculation;
-        // calcDisplayCurrent.textContent = calcDisplayCurrent.textContent.slice(0, -1);
-        // calcDisplayCurrent.textContent.slice(0, -1) = CombineCalculation;
+    else if (val === "DE") {
+        var del = calcDisplayCurrent.textContent.slice(0, -1);
+        CombineCalculation = del;
+        console.log(calculator);
+        calcDisplayCurrent.textContent = del;
+        calculator = calcDisplayCurrent.textContent;
+        // calcDisplayCurrent.textContent = CombineCalculation;
     }
     else if (val === "=") {
         console.log(CombineCalculation);
-        calcDisplayPrevious.textContent = CombineCalculation;
-        calcDisplayCurrent.textContent = eval(CombineCalculation);
+        try {
+            calcDisplayPrevious.textContent = CombineCalculation;
+            calcDisplayCurrent.textContent = eval(CombineCalculation);
+        }
+        catch (err) {
+            alert("Error!");
+        }
     }
     else {
         calculator.push(val);
         CombineCalculation = calculator.join('');
         calcDisplayCurrent.textContent = CombineCalculation;
-        // calcDisplayCurrent.textContent = calcDisplayCurrent.textContent + val;
     }
 }
 
