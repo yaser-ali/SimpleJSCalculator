@@ -3,12 +3,9 @@ const calcDisplayPrevious = document.querySelector(".previous");
 const buttons = document.querySelectorAll('button');
 
 let calculator = [];
-let CombineCalculation;
-// console.log(buttons);
+let CombineCalculation = "";
 
 function calculate(button) {
-
-    // console.log(button);
 
     const val = button.textContent;
 
@@ -21,9 +18,10 @@ function calculate(button) {
     else if (val === "DE") {
         var del = calcDisplayCurrent.textContent.slice(0, -1);
         CombineCalculation = del;
-        // console.log(calculator);
         calcDisplayCurrent.textContent = del;
-        calculator = calcDisplayCurrent.textContent;
+        del = calculator.pop(val);
+        calcDisplayCurrent.textContent = CombineCalculation;
+
     }
     else if (val === "=") {
         console.log(CombineCalculation);
