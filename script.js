@@ -30,12 +30,10 @@ function calculate(button) {
         console.log(CombineCalculation);
         try {
             calcDisplayPrevious.textContent = CombineCalculation;
-            if(isNaN(CombineCalculation)) throw "Not a number!";
-            if(CombineCalculation == "") throw "Empty!";
             calcDisplayCurrent.textContent = eval(CombineCalculation);
         }
         catch (err) {
-            alert("Error Message: " + err);
+            alert("Error!");
         }
     }
     else {
