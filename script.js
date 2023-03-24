@@ -19,7 +19,7 @@ function calculate(button) {
         var del = calcDisplayCurrent.textContent.slice(0, -1);
         CombineCalculation = del;
         calcDisplayCurrent.textContent = del;
-        if (CombineCalculation == 0) {
+        if (CombineCalculation !== 0) {
             del = calculator.pop(val);
             calcDisplayCurrent.textContent = CombineCalculation;
         }
