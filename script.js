@@ -23,14 +23,6 @@ function calculate(button) {
             del = calculator.pop(val);
             calcDisplayCurrent.textContent = CombineCalculation;
         }
-        else if (calcDisplayCurrent.textContent) 
-        {
-            // calculator = [];
-            calcDisplayPrevious.textContent = calcDisplayCurrent.textContent;
-
-            // .textContent = CombineCalculation;
-            // calcDisplayCurrent.textContent = calculator;
-        }
     }
     else if (val === "=") {
         console.log(CombineCalculation);
