@@ -25,7 +25,7 @@ function calculate(button) {
         }
     }
     else if (val === "=") {
-        console.log(CombineCalculation);
+        // console.log(CombineCalculation);
         if (CombineCalculation == "") {
             alert("Please input a number and an operator!");
         }
